@@ -6,6 +6,8 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 -->
 
+> **Archived predecessor:** active development has moved to [Aven](https://github.com/rigoroso-tyler/Aven), a standalone Android emulator project. Download the [Aven test release](https://github.com/rigoroso-tyler/Aven/releases) and submit new test reports in [Aven Issues](https://github.com/rigoroso-tyler/Aven/issues). This repository and its original APK remain available as a historical snapshot.
+
 <p align="center">
   <img src="dist/branding/lichii_icon_with_logo.png" alt="Lichii" width="600">
 </p>

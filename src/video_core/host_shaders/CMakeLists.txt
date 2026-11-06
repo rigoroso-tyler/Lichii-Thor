@@ -109,11 +109,11 @@ if (HAIKUOS)
     set(GLSLANGVALIDATOR "glslang")
 else()
     # Normal sane platform who doesn't have a CRASHING glslangValidator
-    find_program(GLSLANGVALIDATOR "glslangValidator")
+    find_program(GLSLANGVALIDATOR NAMES glslangValidator glslang)
 endif()
 
 if ("${GLSLANGVALIDATOR}" STREQUAL "GLSLANGVALIDATOR-NOTFOUND")
-    message(FATAL_ERROR "Required program `glslangValidator` not found.")
+    message(FATAL_ERROR "Required GLSL compiler (glslangValidator or glslang) not found.")
 endif()
 
 set(GLSL_FLAGS "-DUseUniformBlock=1")

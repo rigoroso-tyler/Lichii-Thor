@@ -188,10 +188,11 @@ android {
         create("mainline") {
             dimension = "version"
             isDefault = true
+            applicationId = "dev.lichii.thor"
             minSdk = 33
 
-            manifestPlaceholders += mapOf("appNameBase" to "Eden")
-            resValue("string", "app_name_suffixed", "Eden")
+            manifestPlaceholders += mapOf("appNameBase" to "Lichii Thor")
+            resValue("string", "app_name_suffixed", "Lichii Thor")
 
             ndk {
                 abiFilters += listOf("arm64-v8a")
@@ -270,7 +271,7 @@ android {
 
         // apply nightly suffix I/A
         resValue("string", "app_name_suffixed", "$currentName$suffix")
-        resValue("string", "app_name", "Eden$suffix")
+        resValue("string", "app_name", "$currentName$suffix")
     }
 
     sourceSets {

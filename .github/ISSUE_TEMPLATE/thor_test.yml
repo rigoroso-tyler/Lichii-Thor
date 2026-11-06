@@ -1,0 +1,67 @@
+name: Thor test result
+description: Report installation, startup, controls or gameplay on an AYN Thor.
+title: "[Thor test] "
+body:
+  - type: input
+    id: build
+    attributes:
+      label: APK version or release tag
+      placeholder: thor-test-0.1.0
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Thor model, RAM and Android version
+      placeholder: Thor Max, 16 GB, Android 13
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game and game version
+    validations:
+      required: true
+  - type: input
+    id: driver
+    attributes:
+      label: GPU driver and version
+      description: State whether you used the system driver or a custom driver.
+    validations:
+      required: true
+  - type: dropdown
+    id: cpu
+    attributes:
+      label: CPU backend
+      options:
+        - Dynarmic / JIT
+        - NCE
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Furthest stage reached
+      options:
+        - APK installation failed
+        - App opened
+        - Game appeared in library
+        - Title screen
+        - Intro movies
+        - First gameplay load
+        - Gameplay
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and reproduction steps
+      description: Include settings, wait time, errors, controls, rendering issues and FPS where useful.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log and screenshots
+      description: Use Share debug logs in the app. Check for personal information first. Do not upload games, keys, firmware or account data.
